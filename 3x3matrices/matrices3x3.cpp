@@ -11,7 +11,7 @@ void main() {
 
 	//ingreso de datos
 
-	cout << "introduce los coeficientes y el termino independiente de la forma:'Ax+By+Cz+D' de las tres ecuaciones." << endl;
+	cout << "introduce los coeficientes y el termino independiente de la forma:'Ax+By+Cz=D' de las tres ecuaciones." << endl;
 	cout << "introduce los terminos de la primera ecuacion:" << endl;
 	cout << "A: ";
 	cin >> a;
