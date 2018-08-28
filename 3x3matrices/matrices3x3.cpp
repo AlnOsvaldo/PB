@@ -11,6 +11,7 @@ void main() {
 
 	//ingreso de datos
 
+	cout << "Este programa calcula los valores de 'x','y' y 'z' de un sistema de ecuaciones de tres variables." << endl;
 	cout << "introduce los coeficientes y el termino independiente de la forma:'Ax+By+Cz=D' de las tres ecuaciones." << endl;
 	cout << "introduce los terminos de la primera ecuacion:" << endl;
 	cout << "A: ";
@@ -71,7 +72,10 @@ void main() {
 	comprobacion = a * sx + b * sy + c * sz == d;
 
 	if (comprobacion = 1) {
-		cout << endl<< "comprobacion verdadera";
+		cout << endl<< "comprobacion verdadera.";
+	}
+	else {
+		cout << endl << "no tiene solucion."
 	}
 	system("pause>nul");
 }
