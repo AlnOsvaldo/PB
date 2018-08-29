@@ -122,7 +122,6 @@ void main() {
 		else if (lug == 11) {
 			if (atr <= at) {
 				cout << "Acabaste con el rey...";
-				cout << endl << "Fin del juego";
 				rey = false;
 			}
 			else {
