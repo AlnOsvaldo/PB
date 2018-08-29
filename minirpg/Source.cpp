@@ -16,7 +16,7 @@ void main() {
 		hp = 25;
 		at = 10;
 	}
-	else {
+	else if(pers==2) {
 		hp = 40;
 		at = 7;
 	}
@@ -28,7 +28,7 @@ void main() {
 
 		srand(time(NULL));
 		ate = 1 + rand() % 15;
-		atr = 1 + rand() % 30;
+		atr = 1 + rand() % 25;
 
 
 		if (lug == 1) {
