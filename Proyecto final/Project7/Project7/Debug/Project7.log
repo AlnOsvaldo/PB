@@ -1,8 +1,0 @@
-﻿  Source.cpp
-Source.obj : error LNK2019: símbolo externo "int __cdecl nombre(void)" (?nombre@@YAHXZ) sin resolver al que se hace referencia en la función _main
-Source.obj : error LNK2019: símbolo externo "int __cdecl apellidos(void)" (?apellidos@@YAHXZ) sin resolver al que se hace referencia en la función _main
-Source.obj : error LNK2019: símbolo externo "int __cdecl correo(void)" (?correo@@YAHXZ) sin resolver al que se hace referencia en la función _main
-Source.obj : error LNK2019: símbolo externo "int __cdecl direccion(void)" (?direccion@@YAHXZ) sin resolver al que se hace referencia en la función _main
-Source.obj : error LNK2019: símbolo externo "int __cdecl telefono(void)" (?telefono@@YAHXZ) sin resolver al que se hace referencia en la función _main
-Source.obj : error LNK2019: símbolo externo "int __cdecl calif(void)" (?calif@@YAHXZ) sin resolver al que se hace referencia en la función _main
-C:\Users\Citlalli\Desktop\project\Project7\Debug\Project7.exe : fatal error LNK1120: 6 externos sin resolver
