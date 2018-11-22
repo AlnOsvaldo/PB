@@ -13,12 +13,14 @@ struct datos {
 	string numero;
 	string correo;
 	string telefono;
-	int matr;
-	float calif[3];
+	string matr;
+	double calif[3];
 	string direccion[2];
 };
 
 datos alumnos[100];
+
+string opcionesc;
 
 void mostrar();
 void registrar();
@@ -73,27 +75,72 @@ void menu() {
 
 void registrar() {
 	system("cls");
+
 	cin.ignore();
+	bool condicion=false;
+	
 	cout << "Ingresa el nombre del alumno: ";
+
 	getline(cin, alumnos[c].nombre);
+
 	cout << "Ingresa el apellido paterno del alumno: ";
+
 	getline(cin, alumnos[c].nombrep);
+
 	cout << "Ingresa el apellido materno del alumno: ";
+
 	getline(cin, alumnos[c].nombrem);
+
 	cout << "Ingresa el telefono del alumno: ";
+
 	getline(cin, alumnos[c].telefono);
-	cout << "Ingresa el correo del alumno: ";
-	getline(cin, alumnos[c].correo);
+	bool arroba = true, punto = true;
+	bool total=true;
+	int cntpntos=0;
+	while (total) {
+
+		cout << "Ingresa el correo del alumno: ";
+
+		getline(cin, alumnos[c].correo);
+		for (int i = 0; alumnos[c].correo[i] != NULL; i++) {
+			if (alumnos[c].correo[i] == 64) {
+				arroba = false;
+			}
+			if (arroba == false) {
+				if (alumnos[c].correo[i] == 46) {
+					cntpntos++;
+				}
+			}
+			if (cntpntos <= 1 && cntpntos >= 2) {
+				punto = false;
+			}
+			if (punto == false) {
+				if (arroba == false) {
+					total = false;
+				}
+			}
+		}
+	}
 	cin.ignore();
+
 	cout << "Ingresa la matricula del alumno: ";
+
 	cin >> alumnos[c].matr;
+
 	cout << "Ingresa las calificaciones del alumno /nPrimera calificacion:";
+
 	cin >> alumnos[c].calif[0];
+
 	cout << "Segunda calificacion: ";
+
 	cin >> alumnos[c].calif[1];
+
 	cout << "Tercera calificacion: ";
+
 	cin >> alumnos[c].calif[2];
+
 	c++;
+
 	menu();
 }
 void buscar() {
@@ -102,8 +149,8 @@ void buscar() {
 	cout << "Ingresa la matricula del alumno:";
 	cin >> opciones;
 	for (int i = 0; i < c; i++) {
-		if (opciones == alumnos[i].matr) {
-			validacosas == true;
+		if (opcionesc == alumnos[i].matr) {
+			validacosas = true;
 			opciones = i;
 			break;
 		}
@@ -124,8 +171,8 @@ void editar() {
 	cout << "Ingresa la matricula del alumno:";
 	cin >> opciones;
 	for (int i = 0; i < c; i++) {
-		if (opciones == alumnos[i].matr) {
-			validacosas == true;
+		if (opcionesc == alumnos[i].matr) {
+			validacosas = true;
 			opciones = i;
 			break;
 		}
@@ -191,8 +238,8 @@ void eliminar() {
 	cout << "Ingresa la matricula del alumno:";
 	cin >> opciones;
 	for (int i = 0; i < c; i++) {
-		if (opciones == alumnos[i].matr) {
-			validacosas == true;
+		if (opcionesc == alumnos[i].matr) {
+			validacosas = true;
 			opciones = i;
 			break;
 		}
