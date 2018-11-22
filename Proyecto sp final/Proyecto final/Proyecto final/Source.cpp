@@ -1,6 +1,7 @@
 #include<iostream>
 #include<string>
 #include <fstream>
+#include<time.h>
 
 using namespace std;
 
@@ -149,6 +150,7 @@ void registrar() {
 			break;
 		}
 		else if (o == 2) {
+			srand(time(NULL));
 			alu[c].matricula = rand() % 2000000 + 1000000;
 			break;
 		}
