@@ -184,7 +184,7 @@ void registrar() {
 			cout << "Hay mas de 1 @" << endl;
 		}
 		else if (countp == 0) {
-			cout << "falta el punto " << endl;
+			cout << "falta el .com " << endl;
 		}
 		else if (countp > 2) {
 			cout << "Hay mas de 2 punto" << endl;
