@@ -57,23 +57,15 @@ int main() {
 
 	c = 0;
 	locale::global(locale("spanish"));
+	
 	ifstream lectura;
 
-	lectura.open("Lista de alumnos.data", ios::binary);
+	lectura.open("Lista_de_alumnos.data", ios::binary);
 	if (lectura.is_open()) {
 
 		while (!lectura.eof()) {
 			lectura.read((char*)&alu, sizeof(alu));
 		}
-	}
-	else {
-		cout << "Lectura de Archivo:" << endl;
-		cout << endl;
-
-		cout << "Archivo inexistente o problemas para abrirlo." << endl;
-		cout << endl;
-		cout << "Presione cualquier tecla para entrar a Menu." << endl;
-		system("pause>nul");
 	}
 
 	lectura.close();
