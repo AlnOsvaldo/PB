@@ -70,7 +70,7 @@ int main() {
 
 	lectura.close();
 
-	for (int i = 1; i < 100; i++)
+	for (int i = 0; i < 100; i++)
 	{
 		if (alu[i].matricula !=NULL) {
 			c++;
@@ -185,7 +185,7 @@ void registrar() {
 			cout << "falta el punto " << endl;
 		}
 		else if (countp > 2) {
-			cout << "Hay mas de un punto" << endl;
+			cout << "Hay mas de 2 punto" << endl;
 		}
 		else {
 			break;
@@ -258,6 +258,7 @@ void mostrar() {
 		cout<<alu[i].apellidos<<" "<< alu[i].nombres<<" "<< alu[i].matricula<<" "<<alu[i].telefono<<" "<< alu[i].correo<<" "<< alu[i].colonia<<" "<< alu[i].callenumero<<" "<<alu[i].calif[3];
 		cout << endl;
 	}
+	cout << "Presione cualquier tecla para regresar al menu\n";
 	system("pause>nul");
 	menu();
 	
@@ -452,7 +453,7 @@ void guardar() {
 
 void excel() {
 	ofstream archivo;
-	archivo.open("lista_excel.cls");
+	archivo.open("lista_excel.csv");
 	for (int i = 0; i < c; i++) {
 		archivo << alu[i].matricula<<",";
 		archivo << alu[i].apellidos << ",";

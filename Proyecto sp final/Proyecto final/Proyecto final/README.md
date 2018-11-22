@@ -30,7 +30,7 @@ Continua con el correo electronico, puedes ingresar tu correoe lectronico este d
 
 Luego el telefono, este solo podra tener entre 8 y 12 caracteres y solo podras ingresar numeros.
 A continuacion las direcciones del alumno, puedes ingresar numeros y espacios.
-Y por ultimo las calificaciones, deberas ingresar calificaciones del 0 al 100. Si el alumno no presento un examen favor de escribir 0.
+Y por ultimo las calificaciones, deberas ingresar calificaciones del 0 al 100. Si el alumno no presento un examen favor de escribir 0. Se pueden ingresar hasta dos decimales.
 
 ...
 
@@ -39,7 +39,7 @@ En buscar y modificar datos de un alumno, deberas ingresar la matricula del alum
 
 ...
 
-Mostrar lista de alumnos mostrara una lista de todos los alumnos registrados por el momento. Con el orden de: Apellidos, Nombres, Matriculas, Telefono, Correo, Colonia, Calle y numero, Calificacion final. 
+Mostrar lista de alumnos mostrara una lista de todos los alumnos registrados por el momento. Con el orden de: Apellidos, Nombres, Matriculas, Telefono, Correo, Colonia, Calle y numero, Calificacion final(Los dos ultimos digitos son decimales). 
 Esta parte es muy importante, podras observar si estas ingresando correctamente los datos.
 
 ...
@@ -48,7 +48,7 @@ Eliminar un alumno te permitira eliminar a un alumno ingresando la matricula. Te
 
 ...
 
-Y por ultimo la opcion de salir del programa, recuerda salir del programa para poder guardar tus avances. 
+Y por ultimo la opcion de salir del programa, recuerda salir del programa para poder guardar tus avances. Guarda tambien un archivo para abrir en excel (que es el que debera de observar el profesor). 
 
 Gracias
 
