@@ -245,8 +245,12 @@ void registrar() {
 	cout << "Ingresa la tercera calificacion:";
 	cin >> alu[c].calif[2];
 
-	alu[c].calif[3] = alu[c].calif[0] * 30 + alu[c].calif[1] * 45 + alu[c].calif[2] * 25;
-
+	if (alu[c].calif[0] != 0 && alu[c].calif[1] != 0 && alu[c].calif[2] != 0) {
+		alu[c].calif[3] = alu[c].calif[0] * 30 + alu[c].calif[1] * 45 + alu[c].calif[2] * 25;
+	}
+	else {
+		alu[c].calif[3] = 0;
+	}
 	c++;
 
 	cout << "Presione cualquier tecla para regresar al menu.";
@@ -437,16 +441,36 @@ void eliminar() {
 
 }
 
-
+void excel();
 
 void guardar() {
 
 	ofstream archivo;
 
-	archivo.open("Lista de alumnos.data", ios::binary);
+	archivo.open("Lista_de_alumnos.data", ios::binary);
 
 	archivo.write((char*)&alu, sizeof(alu));
 
 	archivo.close();
 
+	excel();
+
+}
+
+
+void excel() {
+	ofstream archivo;
+	archivo.open("lista_excel.cls");
+	for (int i = 0; i < c; i++) {
+		archivo << alu[i].matricula<<",";
+		archivo << alu[i].apellidos << ",";
+		archivo << alu[i].nombres << ",";
+		archivo << alu[i].calif[3] << ",";
+		archivo << alu[i].correo << ",";
+		archivo << alu[i].telefono << ",";
+		archivo << alu[i].callenumero << ",";
+		archivo << alu[i].colonia << ",";
+		archivo << endl;
+	}
+	archivo.close();
 }
